@@ -22,6 +22,15 @@ This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PA
 
 - Work in progress toward the next release.
 
+## Nema v1.0.1 — 2026-07-09
+
+### Changed
+- Refreshed the entire look to match the Nema design language: warm paper canvas, deep-green ink, and mint message bubbles (previously the app inherited the device's system accent colors).
+- Notebook list now has a dedicated search bar and Pinned / All notebooks sections.
+- Chat view: notebook avatar in the header, subtle dotted wallpaper, and a rounded composer.
+- Times now show in 12-hour format (2:14 PM); list timestamps are relative (Yesterday, Mon, Jun 28).
+- Search results show the notebook, highlight the matched words, and summarize the result count and date range.
+
 ## Nema v1.0.0 — 2026-07-09
 
 First public release of Nema.
