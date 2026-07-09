@@ -24,6 +24,18 @@ capturing a thought is as fast as sending a text.**
 
 ---
 
+## 📱 Screenshots
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/screenshots/home.png" alt="Notebook list with pinned notebooks" width="240"><br><sub>Notebooks — pinned & all</sub></td>
+    <td align="center"><img src="docs/screenshots/notebook.png" alt="Chat-style notebook with notes" width="240"><br><sub>Capture like texting</sub></td>
+    <td align="center"><img src="docs/screenshots/search.png" alt="Search results with highlighted matches" width="240"><br><sub>Search everything</sub></td>
+  </tr>
+</table>
+
+---
+
 ## 📥 Download & install
 
 1. Go to the [**latest release**](../../releases/latest).
