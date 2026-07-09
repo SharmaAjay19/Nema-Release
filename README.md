@@ -12,6 +12,8 @@
 you already use every day: **notebooks are chats, notes are messages, and
 capturing a thought is as fast as sending a text.**
 
+> **Latest release: [Nema v1.0.1](../../releases/latest)** · Android 8.0+ · fully offline
+
 - 💬 **Texting-speed capture** — open, type, send. Your note is saved instantly.
 - 🗂️ **Organize by topic** — a notebook per subject (Gym Log, Food Log, Ideas),
   with pinning so this week's priorities float to the top.
@@ -24,8 +26,8 @@ capturing a thought is as fast as sending a text.**
 
 ## 📥 Download & install
 
-1. Go to the [**Releases**](../../releases) page.
-2. Download the latest `nema-v<X.Y.Z>-release.apk`.
+1. Go to the [**latest release**](../../releases/latest).
+2. Download `nema-v1.0.1-release.apk`.
 3. (Recommended) Verify the download — see **Verifying your download** below.
 4. On your Android device, open the APK and allow installation from this source
    if prompted.
@@ -40,8 +42,8 @@ integrity:
 
 ```bash
 # Compare the printed hash against the contents of the .sha256 file
-sha256sum nema-v1.0.0-release.apk         # Linux / macOS
-Get-FileHash nema-v1.0.0-release.apk      # Windows PowerShell (SHA256 by default)
+sha256sum nema-v1.0.1-release.apk         # Linux / macOS
+Get-FileHash nema-v1.0.1-release.apk      # Windows PowerShell (SHA256 by default)
 ```
 
 The hashes must match exactly. If they don't, do not install the file.
@@ -59,6 +61,17 @@ The hashes must match exactly. If they don't, do not install the file.
 Planned intelligence (future major release): on-device AI redrafting, `/ask`
 and `/compact` commands, user-authored Skills, and structured extraction — all
 running **on-device**, privacy-first.
+
+---
+
+## 🆕 What's new in v1.0.1
+
+A visual refresh that brings the app fully in line with the Nema design language:
+warm paper canvas, deep-green ink, and mint message bubbles. The notebook list
+gains a search bar and Pinned / All notebooks sections, the chat view adds a
+notebook avatar and a rounded composer, times switch to a friendly 12-hour
+format, and search now highlights matched words and shows a result count and
+date range. See the [`CHANGELOG.md`](CHANGELOG.md) for the full history.
 
 ---
 
