@@ -12,18 +12,21 @@
 you already use every day: **notebooks are chats, notes are messages, and
 capturing a thought is as fast as sending a text.**
 
-> **Latest release: [Nema v2.0.0](../../releases/latest)** · Android 8.0+ · on-device AI, private by design
+> **Latest release: [Nema v2.1.0](../../releases/latest)** · Android 8.0+ · on-device AI, private by design
 
 - 💬 **Texting-speed capture** — open, type, send. Your note is saved instantly.
 - 🗂️ **Organize by topic** — a notebook per subject (Gym Log, Food Log, Ideas),
   with pinning so this week's priorities float to the top.
 - 🔍 **Find anything** — fast global and in-notebook search with date ranges.
 - ✨ **On-device AI** — redraft, ask, summarize, extract, and run Skills — all
-  running **locally on your phone**. No cloud, no account.
-- 🔒 **Private by design** — the AI runs on-device. The only network use is the
-  optional model download, which is logged in the Privacy ledger and can be
-  turned off entirely with **Sealed Mode**. Without a model, Nema is a fully
-  offline notebook.
+  running **locally on your phone** by default. No cloud, no account.
+- ☁️ **Bring your own model (optional)** — power the same AI features with your
+  own OpenAI, Anthropic, or Foundry/Azure API key instead. Off by default; your
+  key stays on your device.
+- 🔒 **Private by design** — the on-device model needs no network at all. Any
+  network use (the optional model download, or a hosted model you opt into) is
+  logged in the Privacy ledger and can be turned off entirely with **Sealed
+  Mode**. Without a model, Nema is a fully offline notebook.
 
 > Nema is an Android app. The intelligence runs on your device.
 
@@ -33,9 +36,10 @@ capturing a thought is as fast as sending a text.**
 
 <table>
   <tr>
-    <td align="center"><img src="docs/screenshots/home.png" alt="Notebook list with pinned notebooks" width="240"><br><sub>Notebooks — pinned & all</sub></td>
-    <td align="center"><img src="docs/screenshots/notebook.png" alt="Chat-style notebook with notes" width="240"><br><sub>Capture like texting</sub></td>
-    <td align="center"><img src="docs/screenshots/search.png" alt="Search results with highlighted matches" width="240"><br><sub>Search everything</sub></td>
+    <td align="center"><img src="docs/screenshots/home.png" alt="Notebook list with pinned notebooks" width="220"><br><sub>Notebooks — pinned & all</sub></td>
+    <td align="center"><img src="docs/screenshots/notebook.png" alt="Chat-style notebook with notes" width="220"><br><sub>Capture like texting</sub></td>
+    <td align="center"><img src="docs/screenshots/search.png" alt="Search results with highlighted matches" width="220"><br><sub>Search everything</sub></td>
+    <td align="center"><img src="docs/screenshots/hosted.png" alt="Settings screen with the optional hosted-model section" width="220"><br><sub>Bring your own model <em>(new)</em></sub></td>
   </tr>
 </table>
 
@@ -44,7 +48,7 @@ capturing a thought is as fast as sending a text.**
 ## 📥 Download & install
 
 1. Go to the [**latest release**](../../releases/latest).
-2. Download `nema-v2.0.0-release.apk`.
+2. Download `nema-v2.1.0-release.apk`.
 3. (Recommended) Verify the download — see **Verifying your download** below.
 4. On your Android device, open the APK and allow installation from this source
    if prompted.
@@ -59,8 +63,8 @@ integrity:
 
 ```bash
 # Compare the printed hash against the contents of the .sha256 file
-sha256sum nema-v2.0.0-release.apk         # Linux / macOS
-Get-FileHash nema-v2.0.0-release.apk      # Windows PowerShell (SHA256 by default)
+sha256sum nema-v2.1.0-release.apk         # Linux / macOS
+Get-FileHash nema-v2.1.0-release.apk      # Windows PowerShell (SHA256 by default)
 ```
 
 The hashes must match exactly. If they don't, do not install the file.
@@ -81,36 +85,49 @@ The hashes must match exactly. If they don't, do not install the file.
   AI builds a live table with rollups, tap-to-source, editing, and CSV export.
 - **Skills** — reusable prompts you attach to notebooks and run on demand, on a
   schedule, or when you add a note. Permissions default to read-only.
-- **Privacy ledger & Sealed Mode** — the only network use (optional model
-  download) is logged; Sealed Mode blocks it entirely.
+- **Bring your own hosted model (optional)** — flip a switch in Settings to power
+  every AI feature with your own OpenAI, Anthropic, or Foundry/Azure API instead
+  of the on-device model. Off by default; on-device stays the default.
+- **Privacy ledger & Sealed Mode** — every network egress (the optional model
+  download, or a hosted model you opt into) is logged; Sealed Mode blocks it all.
 
 ---
 
-## 🆕 What's new in v2.0.0
+## 🆕 What's new in v2.1.0
 
-Nema's first **on-device AI** release. Notebooks get intelligent while staying
-private: AI redrafting in the composer, `/ask` and `/compact` grounded in your
-own notes, user-programmable **Extraction rules** that turn notes into structured
-tables, and **Skills** — reusable prompts you can attach to notebooks and trigger
-on demand, on a schedule, or on new notes. Everything runs on your device using a
-local model; the app remains a fully-functional offline notebook if you never
-download one. See the [`CHANGELOG.md`](CHANGELOG.md) for the full history.
+Nema now lets you **bring your own hosted model**. If you'd rather power the AI
+features with a cloud API than the on-device model, open **Settings → Hosted
+model**, flip the switch, and add your **OpenAI**, **Anthropic**, or
+**Foundry/Azure** endpoint, key, and model name. Once enabled, every AI feature —
+redraft, `/ask`, `/compact`, extraction, and Skills — routes through your hosted
+model. It's **off by default**, on-device remains the default, your key stays on
+your device, and every hosted call is recorded in the Privacy Receipt and
+blockable with Sealed Mode. See the [`CHANGELOG.md`](CHANGELOG.md) for the full
+history.
 
 ---
 
 ## 🔐 Privacy
 
-Nema's AI runs **on your device**. The one and only network use is the optional,
-on-demand **model download** — and it is:
+Nema's AI runs **on your device** by default, and that path makes **zero** network
+calls. Nema only touches the network in two cases, both under your control:
 
-- **Ledgered** — every download is recorded (host, bytes, purpose; never your
-  note content) in the in-app Privacy Receipt.
-- **Blockable** — turn on **Sealed Mode** to block all egress; the app keeps
-  working as an offline notebook.
-- **Optional** — with no model downloaded, Nema makes no network calls and is a
-  fully offline v1-style notebook.
+- **The optional model download** — an on-demand download to enable the on-device
+  AI features.
+- **A hosted model you opt into** — if you turn on a hosted model in Settings, your
+  requests go to the endpoint you configured. This is **off by default** and your
+  API key stays on your device.
 
-Your notes never leave your device.
+Both are:
+
+- **Ledgered** — every egress is recorded (host, bytes, purpose; never your note
+  content) in the in-app Privacy Receipt.
+- **Blockable** — turn on **Sealed Mode** to block all egress, including hosted
+  calls; the app keeps working as an offline notebook.
+- **Optional** — with no model downloaded and hosting off, Nema makes no network
+  calls and is a fully offline v1-style notebook.
+
+Your notes are never sent anywhere unless you explicitly enable a hosted model.
 
 ---
 

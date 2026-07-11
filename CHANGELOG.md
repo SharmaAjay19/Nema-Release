@@ -22,6 +22,20 @@ This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PA
 
 - Work in progress toward the next release.
 
+## Nema v2.1.0 — 2026-07-11
+
+Bring your own hosted model. On-device AI remains the default; this release adds
+an optional way to power the AI features with a cloud API instead.
+
+### Added
+- **Hosted model (optional)** — in **Settings → Hosted model**, turn on *Use a hosted model* to route every AI feature (redraft, /ask, /compact, extraction, and Skills) through a cloud API instead of the on-device model. Supports **OpenAI**, **Anthropic**, and **Foundry / Azure OpenAI**; configure the base URL, API key, and model name per provider.
+
+### Changed
+- On-device AI is still the default and needs no configuration. The hosted option is off until you enable it, and your API key stays on your device.
+
+### Security
+- Every hosted request is recorded in the in-app Privacy Receipt (host, byte count, and purpose — never your note content), and **Sealed Mode** blocks hosted calls just like it blocks the model download.
+
 ## Nema v2.0.0 — 2026-07-10
 
 The first on-device AI release. Notebooks get intelligent while your notes stay
