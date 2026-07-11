@@ -22,6 +22,26 @@ This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PA
 
 - Work in progress toward the next release.
 
+## Nema v2.0.0 — 2026-07-10
+
+The first on-device AI release. Notebooks get intelligent while your notes stay
+on your device.
+
+### Added
+- **AI Redraft (✨)** in the composer — tidy, shorten, expand, or rewrite as bullets before sending. Your original wording is always kept.
+- **/ask** — ask a question and get an answer grounded only in that notebook's notes, with tappable source chips.
+- **/compact** — summarize a notebook into a short recap.
+- **Extraction rules** — describe in plain language what to pull from your notes; Nema drafts the structure, shows sample extractions to confirm, then builds a live **Extracts** table with per-day rollups, tap-to-source, inline editing, and CSV export.
+- **Skills** — author reusable prompts and attach them to notebooks. Run them on demand, on a schedule, or automatically when you add a note (with a one-tap suggestion chip). Skill permissions default to read-only; writing and archiving are opt-in per skill, and every action is undoable.
+- **Privacy Receipt & Sealed Mode** — see every network egress (only the optional model download) and block it entirely with Sealed Mode.
+- On-demand model download (resumable) to enable the AI features.
+
+### Changed
+- Nema now requests the INTERNET permission solely for the optional, user-initiated model download. With no model downloaded, the app makes no network calls and works fully offline, exactly like v1.
+
+### Security
+- The AI runs entirely on-device. Note content never leaves your device; the download ledger records only host, byte count, and purpose.
+
 ## Nema v1.0.1 — 2026-07-09
 
 ### Changed

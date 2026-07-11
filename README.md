@@ -12,15 +12,20 @@
 you already use every day: **notebooks are chats, notes are messages, and
 capturing a thought is as fast as sending a text.**
 
-> **Latest release: [Nema v1.0.1](../../releases/latest)** · Android 8.0+ · fully offline
+> **Latest release: [Nema v2.0.0](../../releases/latest)** · Android 8.0+ · on-device AI, private by design
 
 - 💬 **Texting-speed capture** — open, type, send. Your note is saved instantly.
 - 🗂️ **Organize by topic** — a notebook per subject (Gym Log, Food Log, Ideas),
   with pinning so this week's priorities float to the top.
 - 🔍 **Find anything** — fast global and in-notebook search with date ranges.
-- 🔒 **Private by construction** — Nema makes **zero network calls. Ever.**
+- ✨ **On-device AI** — redraft, ask, summarize, extract, and run Skills — all
+  running **locally on your phone**. No cloud, no account.
+- 🔒 **Private by design** — the AI runs on-device. The only network use is the
+  optional model download, which is logged in the Privacy ledger and can be
+  turned off entirely with **Sealed Mode**. Without a model, Nema is a fully
+  offline notebook.
 
-> Nema is an Android app. It runs fully offline.
+> Nema is an Android app. The intelligence runs on your device.
 
 ---
 
@@ -39,7 +44,7 @@ capturing a thought is as fast as sending a text.**
 ## 📥 Download & install
 
 1. Go to the [**latest release**](../../releases/latest).
-2. Download `nema-v1.0.1-release.apk`.
+2. Download `nema-v2.0.0-release.apk`.
 3. (Recommended) Verify the download — see **Verifying your download** below.
 4. On your Android device, open the APK and allow installation from this source
    if prompted.
@@ -54,8 +59,8 @@ integrity:
 
 ```bash
 # Compare the printed hash against the contents of the .sha256 file
-sha256sum nema-v1.0.1-release.apk         # Linux / macOS
-Get-FileHash nema-v1.0.1-release.apk      # Windows PowerShell (SHA256 by default)
+sha256sum nema-v2.0.0-release.apk         # Linux / macOS
+Get-FileHash nema-v2.0.0-release.apk      # Windows PowerShell (SHA256 by default)
 ```
 
 The hashes must match exactly. If they don't, do not install the file.
@@ -68,30 +73,44 @@ The hashes must match exactly. If they don't, do not install the file.
 - **Instant note capture** — nothing ever sits between you and saving a note.
 - **Two-tier search** (global / in-notebook) with date-range filters.
 - **Local-first storage** that survives reinstall; encrypted local backup/export.
-- **Privacy Receipt** — a running statement that Nema has made **0** network calls.
-
-Planned intelligence (future major release): on-device AI redrafting, `/ask`
-and `/compact` commands, user-authored Skills, and structured extraction — all
-running **on-device**, privacy-first.
+- **AI Redraft (✨)** — tidy, shorten, expand, or bulletize a draft before you
+  send it; your original is never lost.
+- **/ask & /compact** — answer questions grounded only in your notes (with source
+  chips), or summarize a notebook. Hybrid search + on-device embeddings.
+- **Extraction rules** — describe what to pull from your notes in plain language;
+  AI builds a live table with rollups, tap-to-source, editing, and CSV export.
+- **Skills** — reusable prompts you attach to notebooks and run on demand, on a
+  schedule, or when you add a note. Permissions default to read-only.
+- **Privacy ledger & Sealed Mode** — the only network use (optional model
+  download) is logged; Sealed Mode blocks it entirely.
 
 ---
 
-## 🆕 What's new in v1.0.1
+## 🆕 What's new in v2.0.0
 
-A visual refresh that brings the app fully in line with the Nema design language:
-warm paper canvas, deep-green ink, and mint message bubbles. The notebook list
-gains a search bar and Pinned / All notebooks sections, the chat view adds a
-notebook avatar and a rounded composer, times switch to a friendly 12-hour
-format, and search now highlights matched words and shows a result count and
-date range. See the [`CHANGELOG.md`](CHANGELOG.md) for the full history.
+Nema's first **on-device AI** release. Notebooks get intelligent while staying
+private: AI redrafting in the composer, `/ask` and `/compact` grounded in your
+own notes, user-programmable **Extraction rules** that turn notes into structured
+tables, and **Skills** — reusable prompts you can attach to notebooks and trigger
+on demand, on a schedule, or on new notes. Everything runs on your device using a
+local model; the app remains a fully-functional offline notebook if you never
+download one. See the [`CHANGELOG.md`](CHANGELOG.md) for the full history.
 
 ---
 
 ## 🔐 Privacy
 
-Nema v1 requests **no INTERNET permission at all** — the strongest possible
-privacy guarantee. Your notes never leave your device. See
-[`PRIVACY.md`](PRIVACY.md) if published, or the in-app Privacy Receipt.
+Nema's AI runs **on your device**. The one and only network use is the optional,
+on-demand **model download** — and it is:
+
+- **Ledgered** — every download is recorded (host, bytes, purpose; never your
+  note content) in the in-app Privacy Receipt.
+- **Blockable** — turn on **Sealed Mode** to block all egress; the app keeps
+  working as an offline notebook.
+- **Optional** — with no model downloaded, Nema makes no network calls and is a
+  fully offline v1-style notebook.
+
+Your notes never leave your device.
 
 ---
 
