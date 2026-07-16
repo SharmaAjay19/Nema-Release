@@ -22,6 +22,42 @@ This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PA
 
 - Work in progress toward the next release.
 
+## Nema v2.5.0 — 2026-07-16
+
+Take control of how long your hosted-model answers can be.
+
+### Added
+- **Max completion tokens (hosted model)** — a new field in **Settings → Hosted model** lets you set the maximum length of each hosted response. Defaults to 2000 and applies to every AI feature (redraft, /ask, /compact, extraction, and Skills) when a hosted model is enabled.
+
+## Nema v2.4.0 — 2026-07-14
+
+Smarter on-device AI: the right model for your phone, plus exact math.
+
+### Added
+- **Exact math on /ask** — turn on **Exact math** in Settings to have the assistant compute sums and totals with a built-in calculator and return the exact number instead of estimating.
+
+### Changed
+- **Device-aware on-device model** — Nema now picks the best-fitting on-device AI model for your phone, using a higher-quality model on more capable devices. On devices that can't run an on-device model comfortably, Nema clearly points you to the optional hosted model instead.
+
+## Nema v2.3.0 — 2026-07-14
+
+Bulk actions come to the notebook.
+
+### Added
+- **Select multiple notes** — long-press a note and choose **Select**, then tap to select several notes and **Copy** or **Delete** them in one go. Bulk delete is undoable, and selection works for your notes and for AI/system messages alike.
+
+## Nema v2.2.0 — 2026-07-13
+
+Run your Skills without leaving the composer.
+
+### Added
+- **Skills in chat** — type **/name** in the composer to run one of a notebook's attached Skills, passing any trailing text as input. Typing **/** shows an autocomplete list that filters as you type.
+
+## Nema v2.1.1 — 2026-07-12
+
+### Added
+- **Delete AI & system messages** — you can now remove an assistant reply (the result of /ask, /compact, or a Skill run) from a notebook the same way you delete your own notes, with undo.
+
 ## Nema v2.1.0 — 2026-07-11
 
 Bring your own hosted model. On-device AI remains the default; this release adds

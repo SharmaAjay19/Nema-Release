@@ -12,7 +12,7 @@
 you already use every day: **notebooks are chats, notes are messages, and
 capturing a thought is as fast as sending a text.**
 
-> **Latest release: [Nema v2.1.0](../../releases/latest)** · Android 8.0+ · on-device AI, private by design
+> **Latest release: [Nema v2.5.0](../../releases/latest)** · Android 8.0+ · on-device AI, private by design
 
 - 💬 **Texting-speed capture** — open, type, send. Your note is saved instantly.
 - 🗂️ **Organize by topic** — a notebook per subject (Gym Log, Food Log, Ideas),
@@ -48,7 +48,7 @@ capturing a thought is as fast as sending a text.**
 ## 📥 Download & install
 
 1. Go to the [**latest release**](../../releases/latest).
-2. Download `nema-v2.1.0-release.apk`.
+2. Download `nema-v2.5.0-release.apk`.
 3. (Recommended) Verify the download — see **Verifying your download** below.
 4. On your Android device, open the APK and allow installation from this source
    if prompted.
@@ -63,8 +63,8 @@ integrity:
 
 ```bash
 # Compare the printed hash against the contents of the .sha256 file
-sha256sum nema-v2.1.0-release.apk         # Linux / macOS
-Get-FileHash nema-v2.1.0-release.apk      # Windows PowerShell (SHA256 by default)
+sha256sum nema-v2.5.0-release.apk         # Linux / macOS
+Get-FileHash nema-v2.5.0-release.apk      # Windows PowerShell (SHA256 by default)
 ```
 
 The hashes must match exactly. If they don't, do not install the file.
@@ -84,26 +84,35 @@ The hashes must match exactly. If they don't, do not install the file.
 - **Extraction rules** — describe what to pull from your notes in plain language;
   AI builds a live table with rollups, tap-to-source, editing, and CSV export.
 - **Skills** — reusable prompts you attach to notebooks and run on demand, on a
-  schedule, or when you add a note. Permissions default to read-only.
+  schedule, or when you add a note. Permissions default to read-only. Run one
+  straight from the composer by typing **/name** (with **/** autocomplete).
+- **Select multiple notes** — long-press → **Select**, then Copy or Delete several
+  notes at once (bulk delete is undoable); works for your notes and AI replies.
+- **Exact math** — optionally let the assistant compute exact sums and totals on
+  `/ask` with a built-in calculator instead of estimating.
 - **Bring your own hosted model (optional)** — flip a switch in Settings to power
   every AI feature with your own OpenAI, Anthropic, or Foundry/Azure API instead
-  of the on-device model. Off by default; on-device stays the default.
+  of the on-device model. Set the **max response length** to control cost and
+  verbosity. Off by default; on-device stays the default.
+- **Right model for your phone** — Nema picks the best-fitting on-device AI model
+  for your device, and points you to the optional hosted model when a device
+  can't run one comfortably.
 - **Privacy ledger & Sealed Mode** — every network egress (the optional model
   download, or a hosted model you opt into) is logged; Sealed Mode blocks it all.
 
 ---
 
-## 🆕 What's new in v2.1.0
+## 🆕 What's new in v2.5.0
 
-Nema now lets you **bring your own hosted model**. If you'd rather power the AI
-features with a cloud API than the on-device model, open **Settings → Hosted
-model**, flip the switch, and add your **OpenAI**, **Anthropic**, or
-**Foundry/Azure** endpoint, key, and model name. Once enabled, every AI feature —
-redraft, `/ask`, `/compact`, extraction, and Skills — routes through your hosted
-model. It's **off by default**, on-device remains the default, your key stays on
-your device, and every hosted call is recorded in the Privacy Receipt and
-blockable with Sealed Mode. See the [`CHANGELOG.md`](CHANGELOG.md) for the full
-history.
+You can now **set the maximum length of each hosted-model response**. Open
+**Settings → Hosted model** and set **Max completion tokens** (default 2000) to
+control how long answers can get — handy for managing cost and verbosity. It
+applies to every AI feature when a hosted model is enabled.
+
+Since the last public release, Nema also gained **Skills you can run from chat**
+with `/name`, **multi-select** for bulk copy/delete of notes, **exact math** on
+`/ask`, and **smarter on-device model selection** that fits your phone. See the
+[`CHANGELOG.md`](CHANGELOG.md) for the full history.
 
 ---
 
